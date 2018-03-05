@@ -1,0 +1,17 @@
+<div class="jumbotron text-center">
+  <h1> Template Generator</h1>
+  <p>Choose a template to generate a document</p> 
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @pdf_templates.each do |template| %>
+        <div class="col-sm-4 linkable">
+          <%#= link_to(create_path(document_id: doc)) do %>
+            <h3> <%= template.title %> </h3>
+            <p> stuff </p>
+          <%# end %>
+        </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,2 @@
+class PdfTemplate < ApplicationRecord
+end

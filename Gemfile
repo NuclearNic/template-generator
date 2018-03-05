@@ -18,6 +18,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'prawn'
 gem 'wicked_pdf'
 
+gem 'bootstrap', '~> 4.0.0'
+gem 'jquery-rails'
 gem 'rails_admin'
 gem 'rails_admin_rollincode', '~> 1.0'
 
