@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get '/manager', to: 'pdf_templates#manager'
+
+  root to: 'pdf_templates#index'
+  get '/index', to: 'pdf_templates#index'
+  get '/show', to: 'pdf_templates#show'
+  get '/generate', to: 'pdf_templates#generate'
 end

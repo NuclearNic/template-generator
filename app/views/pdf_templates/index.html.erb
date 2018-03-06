@@ -7,10 +7,10 @@
   <div class="row">
     <% @pdf_templates.each do |template| %>
         <div class="col-sm-4 linkable">
-          <%#= link_to(create_path(document_id: doc)) do %>
+          <%= link_to(show_path(pdf_template_id: template)) do %>
             <h3> <%= template.title %> </h3>
             <p> stuff </p>
-          <%# end %>
+          <% end %>
         </div>
     <% end %>
   </div>

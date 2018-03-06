@@ -1,0 +1,17 @@
+<div class="jumbotron text-center">
+  <h1> Template Generator</h1>
+  <p>Choose a template to generate a document</p> 
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-sm-4 linkable">
+        <p><%= @pdf_template.title %></p>
+     </div> 
+    <div class="col-sm-4">
+        <div class="btn btn-primary">
+          <%= link_to 'Generate PDF', generate_path, :class => "btn-primary" %> 
+        </div>
+    </div>
+  </div>
+</div>
