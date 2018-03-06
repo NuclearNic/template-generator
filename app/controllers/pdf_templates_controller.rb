@@ -8,7 +8,9 @@ class PdfTemplatesController < ApplicationController
   end
 
   def generate
-    @content = 'awesome content'
+    @content = PdfTemplate.find(params[:pdf_template_id]).content
+    # @content = @pdf_template.title
+
 
     render  pdf: 'filename.pdf',
             template: 'pdf_templates/generate.html.erb',#, :show_as_html => true

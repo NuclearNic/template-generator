@@ -23,6 +23,12 @@ RailsAdmin.config do |config|
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar = true
 
+  config.model PdfTemplate do
+    edit do
+      field :content, :wysihtml5
+    end
+  end
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
@@ -30,7 +36,9 @@ RailsAdmin.config do |config|
     export
     bulk_delete
     show
-    edit
+    edit do
+
+    end
     delete
     show_in_app
 

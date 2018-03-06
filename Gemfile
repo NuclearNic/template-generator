@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'prawn'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
+gem 'bootstrap-wysihtml5-rails'
 
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
