@@ -27,7 +27,10 @@ RailsAdmin.config do |config|
     edit do
       field :title
       field :header, :ck_editor
-      field :content, :ck_editor 
+      field :content, :ck_editor
+      field :footer, :ck_editor
+      # field :footer,: config_js ck_editor base_location + "config.js" end
+
     end
   end
 
