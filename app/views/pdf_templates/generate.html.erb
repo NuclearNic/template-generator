@@ -6,10 +6,10 @@
     <%= wicked_pdf_javascript_include_tag "number_pages" %>
   </head>
   <body onload='number_pages'>
-    <div id="header">
-    </div>
+    <%# <div id="header"> %>
+    <%# </div> %>
     <div id="content">
-      <%# <p> hello world </p> %>
+      <%= @header.html_safe %>
       <%= @content.html_safe %>
     </div>
   </body>

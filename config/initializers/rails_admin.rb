@@ -25,7 +25,9 @@ RailsAdmin.config do |config|
 
   config.model PdfTemplate do
     edit do
-      field :content, :wysihtml5
+      field :title
+      field :header, :ck_editor
+      field :content, :ck_editor 
     end
   end
 

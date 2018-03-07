@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180306152500) do
+ActiveRecord::Schema.define(version: 20180307095111) do
 
   create_table "pdf_templates", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "content"
+    t.text "header"
   end
 
 end
