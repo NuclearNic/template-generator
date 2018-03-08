@@ -30,7 +30,6 @@ RailsAdmin.config do |config|
       field :content, :ck_editor
       field :footer, :ck_editor
       # field :footer,: config_js ck_editor base_location + "config.js" end
-
     end
   end
 
@@ -41,9 +40,7 @@ RailsAdmin.config do |config|
     export
     bulk_delete
     show
-    edit do
-
-    end
+    edit
     delete
     show_in_app
 
