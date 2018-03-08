@@ -5,12 +5,22 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-sm-4 linkable">
+      <div class="col-sm-6">
         <p><%= @pdf_template.title %></p>
      </div> 
-    <div class="col-sm-4">
+    <div class="col-sm-2">
         <div class="btn btn-primary">
-          <%= link_to 'Generate PDF', generate_path(pdf_template_id: @pdf_template), :class => "btn-primary" %> 
+          <%= link_to 'Pdfkit PDF', generate_with_pdfkit_path(pdf_template_id: @pdf_template), :class => "btn-primary" %> 
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="btn btn-primary">
+          <%= link_to 'Prawn PDF', generate_with_prawn_path(pdf_template_id: @pdf_template), :class => "btn-primary" %> 
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="btn btn-primary">
+          <%= link_to 'Wicked PDF', generate_with_wicked_path(pdf_template_id: @pdf_template), :class => "btn-primary" %> 
         </div>
     </div>
   </div>
