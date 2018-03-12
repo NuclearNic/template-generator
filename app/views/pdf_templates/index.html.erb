@@ -1,17 +1,32 @@
 <div class="jumbotron text-center">
-  <h1> Template Generator</h1>
-  <p>Choose a template to generate a document</p> 
+  <h1>Template Service POC</h1>
+  <p>Choose a template from the list below to generate a document</p> 
 </div>
 
 <div class="container">
   <div class="row">
+    <div class="col-sm-4">
+      <h2><u>Template Name</u></h2>
+    </div>
+    <div class="col-sm-6">
+      <h2><u>Description</u></h2>
+    </div>
+    <div class="col-sm-2">
+      <h2><u>Preview</u></h2>
+      <br>
+    </div>
     <% @pdf_templates.each do |template| %>
         <div class="col-sm-4 linkable">
-          <%= link_to(show_path(pdf_template_id: template)) do %>
-            <h3> <%= template.title %> </h3>
-            <p> stuff </p>
-          <% end %>
+            <h4> <%= template.title %> </h4>
         </div>
+        <div class="col-sm-6 linkable">
+          <p> <%= template.description %> </p>
+        </div>
+        <%= link_to(show_path(pdf_template_id: template)) do %>
+          <div class="col-sm-2 linkable">
+            <p> Generate </p>
+          </div>
+      <% end %>
     <% end %>
   </div>
 </div>

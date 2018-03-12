@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180307134647) do
+ActiveRecord::Schema.define(version: 20180312101539) do
 
   create_table "pdf_templates", force: :cascade do |t|
     t.string "title"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20180307134647) do
     t.text "content"
     t.text "header"
     t.text "footer"
+    t.string "description"
   end
 
 end

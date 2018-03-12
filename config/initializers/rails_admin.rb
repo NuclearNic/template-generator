@@ -26,10 +26,27 @@ RailsAdmin.config do |config|
   config.model PdfTemplate do
     edit do
       field :title
+      field :description
       field :header, :ck_editor
       field :content, :ck_editor
       field :footer, :ck_editor
       # field :footer,: config_js ck_editor base_location + "config.js" end
+    end
+    list do
+      field :title
+      field :description
+      field :content
+      field :header
+      field :footer
+      configure :id do
+        hide
+      end
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
     end
   end
 
