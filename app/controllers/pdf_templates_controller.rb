@@ -1,6 +1,6 @@
 # it does what it says man
 class PdfTemplatesController < ApplicationController
-  before_action :get_template_elements
+  before_action :get_template_elements, only: [:pdfkit_generate, :prawn_generate, :wicked_generate] 
 
   def index
     @pdf_templates = PdfTemplate.all
@@ -23,6 +23,7 @@ class PdfTemplatesController < ApplicationController
   def prawn_generate
     pdf = Prawn::Document.new
     pdf.text 'Hello World'
+
     send_data pdf.render, 
           type: 'application/pdf',
           disposition: 'inline'
@@ -30,6 +31,7 @@ class PdfTemplatesController < ApplicationController
 
   def wicked_generate
     render  pdf: 'filename.pdf',
+            extra: '--enable-forms',
             template: 'pdf_templates/wicked/content.html.erb',#, :show_as_html => true
             title: @pdf_template.title,
             page_size: 'A4',

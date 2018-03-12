@@ -2,14 +2,16 @@
 <html>
   <head>
     <meta charset='utf-8' />
-    <%= wicked_pdf_stylesheet_link_tag "pdf" %>
-    <%= wicked_pdf_javascript_include_tag "number_pages" %>
+    <%#= wicked_pdf_stylesheet_link_tag "pdf" %>
+    <%#= wicked_pdf_javascript_include_tag "number_pages" %>
   </head>
   <body onload='number_pages'>
     <%# <div id="header"> %>
     <%# </div> %>
     <div id="content">
       <%= @header.html_safe %>
+      <td>Date:</td><td><input id="text4" name="text4" size="38" type="text"></td>
+      <td>Date2:</td><td><input name="text5" size="38" type="text"></td>
       <%= @content.html_safe %>
     </div>
   </body>

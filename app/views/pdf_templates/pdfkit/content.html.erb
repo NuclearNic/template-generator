@@ -1,1 +1,16 @@
-hello pdfkit
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <%#= wicked_pdf_stylesheet_link_tag "pdf" %>
+    <%#= wicked_pdf_javascript_include_tag "number_pages" %>
+  </head>
+  <body onload='number_pages'>
+    <%# <div id="header"> %>
+    <%# </div> %>
+    <div id="content">
+      <%= @header.html_safe %>
+      <%= @content.html_safe %>
+    </div>
+  </body>
+</html>

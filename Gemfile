@@ -15,14 +15,11 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
-
-
 # pdf generation libs
 gem 'pdfkit'
 gem 'prawn'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
-
 
 gem 'bootstrap', '~> 4.0.0'
 gem 'bootstrap-wysihtml5-rails'
